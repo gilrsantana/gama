@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Utilizando JavaScript para intervenções no HTML</title>
+
+    <script>
+
+        function funcao() {
+            document.getElementById('texto').innerHTML = "Olá, boa noite a todos";
+            document.getElementById('texto1').innerHTML = "vamos codar em JavaScript";
+            var meuP = document.getElementById('texto2').innerHTML;
+            document.getElementById('texto2').innerHTML = meuP + " vamos nos divertir";
+            document.getElementsByTagName('p')[12].innerHTML = "Achei você";
+            //document.querySelector('p').style.color = "red";
+        }
+
+
+    </script>
+
+
+
+
+</head>
+
+<body onload="funcao()">
+    <div class="allContent">
+        <div class="container">
+            <section class="pageInfo">
+                <h1>Mentoria JavaScript</h1>
+                <hr>
+                <p><span>Semana: </span>1</p>
+                <p><span>Módulo: </span>Fundamentos do JavaScript</p>
+                <p><span>Professor: </span>Ricardo Alexandre Bontempo</p>
+                <p><span>Data da aula: </span>18 de agosto de 2022</p>
+                <p><span>Desafio: </span>Exibir conteúdo na página utilizando JavaScript.</p>
+            </section>
+            <section class="content">
+                <header>
+                    <h1>Dev For Tech</h1>
+                    <h2>Back End (Node) - Turma 03</h2>
+                </header>
+                <div class="primary">
+                    <p style="margin-bottom: 10px;">Descrição da atividade: <br></p>
+                    <p>1º) Colher o nome do usuário</p>
+                    <p>2º) Agregar em um prompt o nome do usuário e perguntar a idade dele(a)</p>
+                    <p>3º) Após perguntar a idade verificar qual o email de contato também com outro prompt</p>
+                    <p>4º) Fazer o resumo das informações através de um alert</p>
+                </div>
+                <div class="myActivity">
+                    <p id="texto"></p>
+                    <p id="texto2">Meu primeiro parágrafo</p>
+                    <p>Meu segundo parágrafo</p>
+                    <p id="texto1"></p>
+                    <p class="virgem">Meu segundo parágrafo</p>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="footerLeft">
+                <p>Nome: Gilmar R. Santana</p>
+            </div>
+            <div class="footerCenter">
+                <h1>Gama Academy</h1>
+                <h2>Dev For Tech - NodeJS - Turma 3</h2>
+            </div>
+            <div class="footerRight">
+                <p>Data: 20 de Agosto de 2022</p>
+            </div>
+        </footer>
+    </div>
+    
+
+    
+
+
+
+</body>
+
+</html>

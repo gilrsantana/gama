@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Prompt e Alert</title>
+
+    <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>
+
+        function funcao() {
+            var nome = prompt("Informe seu nome: ").toUpperCase();
+            var idade = prompt(nome + ", por favor, informe sua idade: ");
+            var email = prompt(nome + ", para concluir, informe seu e-mail");
+            var agradecimento = "Obrigado pelas informações!"
+            alert("Nome: " + nome + "\n" +
+                "Idade: " + idade + " anos\n" +
+                "E-mail: " + email + "\n" + agradecimento);
+        }
+
+
+    </script>
+
+
+
+
+</head>
+
+<body onload="funcao()">
+
+    <div class="container">
+        <section class="pageInfo">
+            <h1>Mentoria JavaScript</h1>
+            <hr>
+            <p><span>Semana: </span>1</p>
+            <p><span>Módulo: </span>Fundamentos do JavaScript</p>
+            <p><span>Professor: </span>Ricardo Alexandre Bontempo</p>
+            <p><span>Data da aula: </span>18 de agosto de 2022</p>
+            <p><span>Desafio: </span>Exibir mensagens de prompt e alert concatenando com as respostas do usuário.</p>
+        </section>
+        <section class="content">
+            <header>
+                <h1>Dev For Tech</h1>
+                <h2>Back End (Node) - Turma 03</h2>
+            </header>
+            <div class="primary">
+                <p style="margin-bottom: 10px;">Descrição da atividade: <br></p>
+                <p>1º) Colher o nome do usuário</p>
+                <p>2º) Agregar em um prompt o nome do usuário e perguntar a idade dele(a)</p>
+                <p>3º) Após perguntar a idade verificar qual o email de contato também com outro prompt</p>
+                <p>4º) Fazer o resumo das informações através de um alert</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footerLeft">
+            <p>Nome: Gilmar R. Santana</p>
+        </div>
+        <div class="footerCenter">
+            <h1>Gama Academy</h1>
+            <h2>Dev For Tech - NodeJS - Turma 3</h2>
+        </div>
+        <div class="footerRight">
+            <p>Data: 20 de Agosto de 2022</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
