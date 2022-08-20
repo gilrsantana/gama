@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+
+    <script>
+        function mensagem() {
+            alert('Executando uma função em JavaScript');
+        }
+
+        function validar() {
+            let campo_nome = cadastro.nome.value.toUpperCase();
+            let campo_senha = cadastro.senha.value;
+            let confirma_senha = cadastro.confirmaSenha.value;
+            
+            let mensagem="" ;
+
+            if(campo_senha.length <= 5 || 
+                campo_nome.length < 1 || 
+                campo_senha != confirma_senha) {
+                if(campo_senha.length < 1)
+                    mensagem += "O campo senha precisa ser preenchido.\n"
+                if(campo_senha.length < 1)
+                    mensagem += "O campo senha não pode ser menor que 6 caracteres.\n"
+                if(campo_nome.length < 1)
+                    mensagem += "O campo nome precisa ser preenchido!\n"
+                if(campo_senha != confirma_senha)
+                    mensagem += "As senhas não coincidem!\n"
+                if(mensagem.length > 0){
+                    alert(mensagem);
+                }
+
+                return false;
+            }
+            
+        }
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <!-- <form action="">
+        <input type="submit" onclick="mensagem()" value="Click">
+    </form>
+    <button onclick="mensagem()">Click</button> -->
+
+
+    <form id="cadastro" method="get">
+        <label for="">Nome: </label>
+        <input type="text" name="nome">
+        <br><br>
+        <label for="">Senha: </label>
+        <input type="password" name="senha">
+        <br><br>
+        <label for="">Confirmação: </label>
+        <input type="password" name="confirmaSenha">
+        <br><br>
+        <br><br>
+        <input type="submit" onclick="return validar()" value="Enviar">
+    </form>
+
+
+
+
+</body>
+
+</html>
