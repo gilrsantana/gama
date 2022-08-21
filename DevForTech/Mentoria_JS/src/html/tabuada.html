@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Trabalhando com laços de repetição</title>
+
+    <script>
+        function calculoTabuada(numero, intervalo){
+            let msg = "";
+            let texto = document.getElementById('texto')
+            
+            if (isNaN(numero) || isNaN(intervalo) ){
+                if(isNaN(numero) ) {
+                    msg += "\nO campo número aceita apenas valores numéricos";
+                    tabuada.numero.style.background = "yellow";
+                    tabuada.numero.focus();
+                }
+                if(isNaN(intervalo) ) {
+                    msg += "\nO campo intervalo aceita apenas valores numéricos";
+                    tabuada.intervalo.style.background = "yellow";
+                    tabuada.intervalo.focus();
+                }
+                alert(msg);
+                return false;
+            } else {
+
+                if(numero == null || intervalo == null) {
+                    if (numero == null) {
+                        msg += "\nO campo número é de preenchimento obrigatório";
+                        tabuada.numero.style.background = "yellow";
+                        tabuada.numero.focus();
+                    }
+                    if (intervalo == null) {
+                        msg += "\nO campo intervalo é de preenchimento obriatório";
+                        tabuada.intervalo.style.background = "yellow";
+                        tabuada.intervalo.focus();
+                    }
+                    alert(msg);
+                    return false;
+                } else {
+                    if(numero == 0 || intervalo == 0) {
+                        msg += "\nOs campos não admitem valor zero";
+                        tabuada.numero.style.background = "yellow";
+                        tabuada.intervalo.style.background = "yellow";
+                        tabuada.intervalo.focus();
+                        tabuada.numero.focus();
+                        alert(msg);
+                        return false;
+                    } else {
+                        if(intervalo > 100) {
+                            msg += "\nO campo intervalo não admite valores maiores que 100";
+                            tabuada.intervalo.style.background = "yellow";
+                            tabuada.intervalo.focus();
+                            alert(msg);
+                            return false;
+                        } else {
+                            tabuada.intervalo.style.background = "white";
+                            tabuada.numero.style.background = "white";
+                            texto.innerHTML = "";
+                            for(let cont = 1; cont <= intervalo; cont++) {
+                                texto.innerHTML += numero + " x " + cont + " = " + cont * numero + "<br>";
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="container">
+            <section class="pageInfo">
+                <h1>Mentoria JavaScript</h1>
+                <hr>
+                <p><span>Semana: </span>1</p>
+                <p><span>Módulo: </span>Fundamentos do JavaScript</p>
+                <p><span>Professor: </span>Ricardo Alexandre Bontempo</p>
+                <p><span>Data da aula: </span>19 de agosto de 2022</p>
+                <p><span>Desafio: </span>Manipulando laços de repetição com JavaScript</p>
+            </section>
+            <section class="content">
+                <header>
+                    <h1>Dev For Tech</h1>
+                    <h2>Back End (Node) - Turma 03</h2>
+                </header>
+                <div class="primary">
+                    <p style="margin-bottom: 10px;">Descrição da atividade: <br></p>
+                    <p style="margin-bottom: 10px;">1º) Exibir uma tabuada com base nos números informados</p>
+
+                    <form action="" method="get" name="tabuada">
+                        <label for="">Informe o número desejado: </label>
+                        <input type="text" id="numero"><br><br>
+                        <label for="">Informe o intervalo: </label>
+                        <input type="text" id="intervalo"><br><br>
+                        <input type="submit" name="" id="" value="Calcular" onclick="return calculoTabuada(numero.value, intervalo.value)">
+                    </form>
+                </div>
+                <div class="myActivity">
+                    <p id="texto"></p>
+                    
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="footerLeft">
+                <p>Nome: Gilmar R. Santana</p>
+            </div>
+            <div class="footerCenter">
+                <h1>Gama Academy</h1>
+                <h2>Dev For Tech - NodeJS - Turma 3</h2>
+            </div>
+            <div class="footerRight">
+                <p>Data: 20 de Agosto de 2022</p>
+            </div>
+        </footer>
+    </div>
+    
+
+    
+
+</body>
+
+
+</html>

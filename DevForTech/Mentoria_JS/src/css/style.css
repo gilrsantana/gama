@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -68,7 +69,8 @@ header h2 {
     background-color: #CCCC;
     border: 1px solid black;
     border-radius: 5px;
-    
+    max-height: 45vh;
+    overflow-y: scroll;
 }
 
 footer {
