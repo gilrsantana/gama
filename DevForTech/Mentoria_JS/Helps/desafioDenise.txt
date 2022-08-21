@@ -1,0 +1,9 @@
+Um alpinista está tentando alcançar uma bandeira que está a alguma altura do solo.
+Na tentativa de alcançar a bandeira o alpinista pode fazer qualquer numero de saltos
+até a pedra onde a bandeira esta montada. Os movimentos só podem ser feitos na parede,
+o escalador deve terminar exatamente na altura da bandeira.
+2 tipos de saltos
+1. um salto de altura 1
+2. salto de altura "bigjump"
+
+Determine o numero minimo de saltos pra o alpinista chegar até a bandeira.
