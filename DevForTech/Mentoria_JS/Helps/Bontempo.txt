@@ -1,0 +1,244 @@
+Criando laço de repetição e utilização da variável const
+=========================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Regitros com Laco de Repetição</title>
+
+    <script>
+        // Criei uma variável do tipo matriz, um array
+        const nome=["Pedro","Paulo","Ana","Flávia","Luciana","Nicole"];
+        /*alert(nome[0]);
+        alert(nome[1]);
+        alert(nome[2]);
+        alert(nome[3]);*/
+
+        alert(nome.length);
+        //Criando um laço de repetição
+        for (let contador=0; contador<=10; contador++){
+            alert(contador);
+        }
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+Formulário.html
+===============
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+
+    <script>
+        // Criando uma função em JavaScript
+        function mensagem() {
+            alert("Executando uma função em JavaScript");
+        }
+
+        //Criando uma função em JS, para validar os campos do formulário
+        function validar() {
+            let CampoNome = cadastro.nome.value;
+            if (CampoNome == "") {
+                alert("Por favor preencha o campo nome pois ele é obrigatório");
+                cadastro.nome.focus();
+                return false;
+            } else {
+                alert("Olá " + CampoNome + " sejam bem vindo");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!--
+        <form>
+            <input type="button" onclick="mensagem()" value="Click">
+        </form>-->
+
+    <form name="cadastro" method="get">
+        <label>Nome:</label>
+        <input type="text" name="nome"><br><br>
+        <label>Senha:</label>
+        <input type="password" name="senha">
+        <input type="submit" onclick="return validar()" value="Enviar">
+    </form>
+
+</body>
+
+</html>
+
+
+
+Página Index.html
+================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página em JavaScript</title>
+
+    <!--Criando a nossa intervenção em JavaScript-->
+    <!--<script>
+        // Trabalhar com variáveis 
+
+        /*var mensagem ="Seja bem vindo";
+        var mensagem1="a nossa página com JavaScript";
+        alert(mensagem+" "+mensagem1);*/
+
+        /*var nome = prompt("Olá seja bem vindo, qual é o seu nome?");
+        alert("Prazer "+nome);*/
+
+        // Uma mensagem demonstrada na tela
+        //alert("Seja bem vindo a nossa página com JavaScript ");
+    
+    </script>-->
+        
+    <style>
+        /* Criando um estilo para tag nativa em html*/ 
+        p{
+            color:red;
+        }
+
+        body{
+            background-color: yellow;
+        }
+
+        /*Criando um estilo para classes */
+        .virgem{
+            color:green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+        <h1>Usando o JavaScript para crijar uma intervenção com o nosso HTML</h1>
+        <p class="java"></p>
+        <p>Isso é o meu primeiro parágrafo</p>
+        <p>Isso é outro parágrafo</p>
+        
+   
+        <p id="texto"></p><br>
+        <p id="texto1" ></p>
+     
+
+        <script> 
+            //Insere um texto na tag desejada
+            document.getElementsByTagName("p")[1].innerHTML="Olá boa noite";
+
+            //Insere um texto no id que está sendo relacionado 
+            document.getElementById("texto").innerHTML="Oi meus querido(a)s";
+            document.getElementById("texto1").innerHTML="Vamos codar em JavaScritp";
+            
+            //Inserir um conteúdo na classe criada para o java
+            const collection=document.getElementsByClassName("java");
+            collection[0].innerHTML="Oi";
+
+        </script>
+
+
+</body>
+</html>
+
+
+teste_js.html
+=============
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        p{
+            color: blue;
+        }
+    
+        .cor{
+            color:rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <p>Eu sou um parágrafo</p>
+    <p class="cor">Parágrafo 2</p>
+    <p>Parágrafo 3</p>
+
+    <script>
+        // Como atribuir uma cor com estilo CSS em uma tag da nossa página
+        document.querySelector("p").style.color="red";
+     
+
+    </script>
+</body>
+</html>
+
+
+
+1- Criamos uma pasta
+2- Depois instalamos a aplicação
+3- abrir a pasta criada
+4- clicar com o botão direito na pasta, vamos escolher a opção git bash here
+5- git --help
+6- git --version
+7- criei um arquivo de desenvolvimento dentro da pasta
+8- git add . ou git add * criação da pilha que irá fazer o upload
+9 -git status
+10- git commit -m "Criando um arquivo de dados"
+*** se for a sua primeira vez !!!
+
+É a conta de e-mail que você utilizou para o seu github
+git config --global user.email"ricardo.bontempo@gmail.com.br"
+
+Depois de apontar o e-mail utilizado na sua conta,
+ponha o nome do usuário que foi criado
+git config --global user.name"RAB1802"
+
+11- git push
+Neste momento o programa git d versionamento irá pedir a sua pasta de armazenamento do github
+
+Criando um branch
+12 - git branch <nome da pasta> Exemplo teste
+13 - git checkout 'teste'
+14 - git add *
+15 - git status
+16 - git commit -m "Area para testes do usuário"
+17 - git push
+OBS.: é capaz dele pedir para você efetuar o push com o endereço do branch novo ou seja teste.
+
+
+Quando criamos um novo branch
+
+você pode fazer git checkout -b <branch>
+assim ele já cria a nova branch e já vai direto para ela
+
+**** Caso você tenha desenvolvido algo novo na sua aplicação e precisa subir novamente no seu github o novo conteúdo, você após adicionar as novas 
+alterações deverá dar a sequencia de git add . , depois dit status 
+git push origin main

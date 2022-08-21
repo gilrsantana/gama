@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Fundamentos JavaScript</title>
+
+    <script>
+        function calcularMedia(){
+            let num1 = parseFloat(prompt("Informe o primeiro número: "));
+            let num2 = parseFloat(prompt("Informe o segundo número: "));
+            console.log((num1 + num2) / 2);
+        }
+
+        function calcularOperacao(){
+            let num1 = parseFloat(prompt("Informe o primeiro número: "));
+            let num2 = parseFloat(prompt("Informe o segundo número: "));
+            let operador = prompt("Informe a operação desejada (+, -, *, /)")
+            switch (operador) {
+                case "+":
+                    console.log((num1 + num2));
+                    break;
+                case "-":
+                    console.log((num1 - num2));
+                    break;
+                case "*":
+                    console.log((num1 * num2));
+                    break;
+                case "/":
+                    console.log((num1 / num2));
+                    break;
+            
+                default:
+                    console.log("Operação incorreta");
+                    break;
+            }
+            
+        }
+
+        function verificarPar(){
+            let num = (prompt("Informe o número: "));
+            let resultado = num % 2;
+
+            if(resultado == 0)
+                console.log("O número " + num + " é par");
+            else
+                console.log("O número " + num + " é impar");
+        }
+
+        function criarTriangulo(){
+            let num = (prompt("Informe o número: "));
+            let msg = "";
+            for(let i = 1; i <= num; i++) {
+                for (let j = 1; j <= num; j++) {
+                    if(j <= i) {
+                        msg += "*"
+                    }
+                }
+                console.log(msg);
+                msg = "";
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="container">
+            <section class="pageInfo">
+                <h1>Mentoria JavaScript</h1>
+                <hr>
+                <p><span>Semana: </span>1</p>
+                <p><span>Módulo: </span>Fundamentos do JavaScript</p>
+                <p><span>Professor: </span>Robert Santos</p>
+                <p><span>Data da aula: </span>19 de agosto de 2022</p>
+                <p><span>Desafio: </span>Fundamentos JavaScript</p>
+            </section>
+            <section class="content">
+                <header>
+                    <h1>Dev For Tech</h1>
+                    <h2>Back End (Node) - Turma 03</h2>
+                </header>
+                <div class="primary">
+                    <p style="margin-bottom: 10px;">Descrição da atividade: <br></p>
+                    <p style="margin-bottom: 10px;">1º) Exibir uma tabuada com base nos números informados. <button onclick="calcularMedia()">Executar</button></p>
+                    <p style="margin-bottom: 10px;">2º) Criar uma função para realizar a opeação entre dois números. <button onclick="calcularOperacao()">Executar</button></p>
+                    <p style="margin-bottom: 10px;">3º) Criar uma função para verificar se um número é par ou impar. <button onclick="verificarPar()">Executar</button></p>
+                    <p style="margin-bottom: 10px;">4º) Exibir no console um triangulo de acordo com o valor passado como parâmetro. <button onclick="criarTriangulo()">Executar</button></p>              
+                </div>
+                <div class="myActivity">
+                    <p id="texto"></p>
+                    
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="footerLeft">
+                <p>Nome: Gilmar R. Santana</p>
+            </div>
+            <div class="footerCenter">
+                <h1>Gama Academy</h1>
+                <h2>Dev For Tech - NodeJS - Turma 3</h2>
+            </div>
+            <div class="footerRight">
+                <p>Data: 20 de Agosto de 2022</p>
+            </div>
+        </footer>
+    </div>
+    
+
+    
+
+</body>
+
+
+</html>
