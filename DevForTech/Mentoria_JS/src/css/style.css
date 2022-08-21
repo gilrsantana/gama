@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -39,7 +40,7 @@ header h2 {
     height: 85vh;
     background-color: #63DC3E;
     padding: 5px;
-    text-align: justify;
+    
 }
 
 .pageInfo span {
@@ -53,7 +54,6 @@ header h2 {
 
 .content {
     width: 100%;
-    padding: 0 20px;
 }
 
 .content header {
@@ -65,11 +65,12 @@ header h2 {
 }
 
 .myActivity {
-    margin-top: 32px;
+    margin: 32px 20px 10px 20px;
     background-color: #CCCC;
     border: 1px solid black;
     border-radius: 5px;
-    
+    max-height: 45vh;
+    overflow-y: scroll;
 }
 
 footer {

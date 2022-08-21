@@ -9,28 +9,24 @@
     <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Utilizando JavaScript para intervenções no HTML</title>
+    <title>Trabalhando com laços de repetição</title>
 
     <script>
-
-        function funcao() {
-            document.getElementById('texto').innerHTML = "Olá, boa noite a todos";
-            document.getElementById('texto1').innerHTML = "vamos codar em JavaScript";
-            var meuP = document.getElementById('texto2').innerHTML;
-            document.getElementById('texto2').innerHTML = meuP + " vamos nos divertir";
-            document.getElementsByTagName('p')[12].innerHTML = "Achei você";
-            //document.querySelector('p').style.color = "red";
+        function exibirNomes(){
+            const nomes = ['André', 'Paula', 'Miguel', 'Tatiana', 'Guilherme', 'Fernando', 'Claudiomar']
+            let texto = document.getElementById('texto');
+            
+            for(let i = 0; i < nomes.length; i++){
+                texto.innerHTML += i + 1 + " - " + nomes[i] + "<br>";
+            }
+      
+          
         }
-
-
     </script>
-
-
-
 
 </head>
 
-<body onload="funcao()">
+<body onload="exibirNomes()">
     <div class="allContent">
         <div class="container">
             <section class="pageInfo">
@@ -39,8 +35,8 @@
                 <p><span>Semana: </span>1</p>
                 <p><span>Módulo: </span>Fundamentos do JavaScript</p>
                 <p><span>Professor: </span>Ricardo Alexandre Bontempo</p>
-                <p><span>Data da aula: </span>18 de agosto de 2022</p>
-                <p><span>Desafio: </span>Exibir conteúdo na página utilizando JavaScript.</p>
+                <p><span>Data da aula: </span>19 de agosto de 2022</p>
+                <p><span>Desafio: </span>Manipulando laços de repetição com JavaScript</p>
             </section>
             <section class="content">
                 <header>
@@ -48,15 +44,12 @@
                     <h2>Back End (Node) - Turma 03</h2>
                 </header>
                 <div class="primary">
-                    
-                    
+                    <p style="margin-bottom: 10px;">Descrição da atividade: <br></p>
+                    <p>1º) Criar laço de repetição para exibição de um array com nomes</p>
                 </div>
                 <div class="myActivity">
                     <p id="texto"></p>
-                    <p id="texto2">Meu primeiro parágrafo</p>
-                    <p>Meu segundo parágrafo</p>
-                    <p id="texto1"></p>
-                    <p class="virgem">Meu segundo parágrafo</p>
+                    
                 </div>
             </section>
         </div>
@@ -77,8 +70,7 @@
 
     
 
-
-
 </body>
+
 
 </html>

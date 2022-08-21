@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon-gama-academy.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Interagindo em formulário com JavaScript</title>
+
+    <script>
+
+        function validar() {
+            var nomeForm = cadastro.nome.value.toUpperCase();
+            var senhaForm = cadastro.senha.value;
+            var confirmaSenhaForm = cadastro.confirmaSenha.value;
+
+            var mensagem = "Verifique os erros abaixo: ";
+
+            if(nomeForm.length < 1 || 
+                senhaForm.length < 5 || 
+                senhaForm.length < 1 ||
+                senhaForm != confirmaSenhaForm) {
+                if (nomeForm.length < 1) {
+                    mensagem += "\nO campo nome é de preenchimento obrigatório.";
+                    cadastro.nome.style.background = "yellow"
+                    cadastro.nome.focus();
+                }
+                
+                if (senhaForm.length < 5 || senhaForm.length < 1) {
+                    if(senhaForm.length < 5)
+                        mensagem += "\nO campo senha precisa ter pelo menos 5 caracteres.";
+                    if(senhaForm.length < 1)
+                        mensagem += "\nO campo senha é de preenchimento obrigatório.";
+                    cadastro.senha.style.background = "yellow"
+                    cadastro.senha.focus();
+                }
+                
+                if (senhaForm != confirmaSenhaForm) {
+                    mensagem += "\nA senha principal não está de acordo com a senha de confirmação."; 
+                    cadastro.senha.style.background = "yellow"
+                    cadastro.confirmaSenha.style.background = "yellow"
+                    cadastro.senha.focus();
+                    cadastro.confirmaSenha.focus();  
+                }
+
+                if (mensagem.length > 0) {
+                    cadastro.nome.style.background = "yellow"
+                    alert(mensagem);
+                }
+                return false;
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="allContent">
+        <div class="container">
+            <section class="pageInfo">
+                <h1>Mentoria JavaScript</h1>
+                <hr>
+                <p><span>Semana: </span>1</p>
+                <p><span>Módulo: </span>Fundamentos do JavaScript</p>
+                <p><span>Professor: </span>Ricardo Alexandre Bontempo</p>
+                <p><span>Data da aula: </span>19 de agosto de 2022</p>
+                <p><span>Desafio: </span>Interagindo em formulário com JavaScript</p>
+            </section>
+            <section class="content">
+                <header>
+                    <h1>Dev For Tech</h1>
+                    <h2>Back End (Node) - Turma 03</h2>
+                </header>
+                <div class="primary">
+                <form action="" name="cadastro" method="get">
+                        <label for="">Nome: </label><br>
+                        <input type="text" name="nome" id=""><br><br>
+                        <label for="">Idade: </label><br>
+                        <input type="text" name="idade" id=""><br><br>
+                        <label for="">E-mail: </label><br>
+                        <input type="email" name="email"><br><br>
+                        <label for="">Senha: </label><br>
+                        <input type="password" name="senha"><br><br>
+                        <label for="">Confirmação de senha: </label><br>
+                        <input type="password" name="confirmaSenha"><br><br>
+
+                        <input type="submit" value="Enviar" onclick="return validar()">
+                    </form>
+                </div>
+                <div class="myActivity">
+                    <p id="texto"></p>
+                    
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="footerLeft">
+                <p>Nome: Gilmar R. Santana</p>
+            </div>
+            <div class="footerCenter">
+                <h1>Gama Academy</h1>
+                <h2>Dev For Tech - NodeJS - Turma 3</h2>
+            </div>
+            <div class="footerRight">
+                <p>Data: 20 de Agosto de 2022</p>
+            </div>
+        </footer>
+    </div>
+    
+
+    
+
+
+
+</body>
+
+</html>
