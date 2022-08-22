@@ -40,3 +40,21 @@ var myObject = null
 console.log(typeof myObject)
 
 console.log(typeof sum)
+
+// Operadores
+
+var sumTwonumber = 1+3;
+console.log(sumTwonumber);
+
+var subTwonumber = 1-3;
+console.log(subTwonumber);
+
+var multTwonumber = 1*3;
+console.log(multTwonumber);
+
+var divTwonumber = 1/3;
+console.log(divTwonumber);
+
+var num = 1;
+console.log(num++);
+console.log(++num);
