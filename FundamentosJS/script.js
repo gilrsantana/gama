@@ -58,3 +58,9 @@ console.log(divTwonumber);
 var num = 1;
 console.log(num++);
 console.log(++num);
+
+if(typeof num == "number"){
+    console.log("é um número")
+} else {
+    console.log("não é um número")
+}
