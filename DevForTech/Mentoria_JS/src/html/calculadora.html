@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suuuper Calculadora</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <!--Criar o estilo do display-->
+    <style>
+
+        button { 
+            width: 25px;
+        }
+
+        #display{
+            width: 250px;
+            height: 40px;
+            background-color: black;
+            margin: 4px;
+            color:white;
+            font-size: 18px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+        }
+
+       /*Padrão botões*/
+       /* #tecla0{
+        width: 85px;
+       } */
+
+       #teclaC{
+        width: 110px;
+       }
+        
+    </style>
+
+    <!--Criando funções em JavaScript para a nossa calculadora-->
+    <script>
+        /*Criando uma função para inserir valores no nosso display da calculadora*/
+        function inserir(num){
+            
+            var numero = document.getElementById('display').innerHTML;
+            if(isNaN(num)) {
+                var resultado = numero.substring(numero.indexOf('=') + 1);
+                limpar();
+                document.getElementById('display').innerHTML=resultado+ num;
+            } else {
+                if (numero.includes("=")) {
+                    limpar();
+                    document.getElementById('display').innerHTML=num;
+                } else {
+                    document.getElementById('display').innerHTML=numero+num;
+                }
+            }
+
+        }
+
+        /*Limpando o conteúdo do nosso display*/
+        function limpar(){
+            document.getElementById('display').innerHTML=" ";
+        }
+
+        function calcular() {
+            
+            var expressao = document.getElementById('display').innerHTML;
+            if (expressao.includes('=')) {
+                document.getElementById('display').innerHTML = expressao.substring(expressao.indexOf('=') + 1); 
+            } else {
+                document.getElementById('display').innerHTML=expressao + '=' + eval(expressao);
+            }
+        }
+
+
+    </script>
+    
+    
+
+
+</head>
+<body>
+    
+    <!--Criando o nosso display da calculadora-->
+    <p id="display"></p>
+
+    <!--Criando os  botões de interação da calculadora-->
+    <button id="tecla7" onclick="inserir('7')">7</button>
+    <button id="tecla8" onclick="inserir('8')">8</button>
+    <button id="tecla9" onclick="inserir('9')">9</button>
+    <button id="tecla/" onclick="inserir('/')">/</button><br><br>
+    <button id="tecla4" onclick="inserir('4')">4</button>
+    <button id="tecla5" onclick="inserir('5')">5</button>
+    <button id="tecla6" onclick="inserir('6')">6</button>
+    <button id="tecla*" onclick="inserir('*')">*</button><br><br>
+    <button id="tecla1" onclick="inserir('1')">1</button>
+    <button id="tecla2" onclick="inserir('2')">2</button>
+    <button id="tecla3" onclick="inserir('3')">3</button>
+    <button id="tecla-" onclick="inserir('-')">-</button><br><br>
+    <button id="tecla0" onclick="inserir('0')">0</button>
+    <button id="tecla/" onclick="inserir('.')">.</button>
+    <button id="tecla=" onclick="calcular()">=</button>
+    <button id="tecla+" onclick="inserir('+')">+</button><br><br>
+    <button id="teclaC" onclick="limpar()">C</button>   
+    
+
+
+
+</body>
+</html>
